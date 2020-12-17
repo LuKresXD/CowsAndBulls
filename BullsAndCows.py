@@ -2,7 +2,10 @@ import random #random
 import time #use for time.sleep()
 from termcolor import colored # color text
 from zalgo_text import zalgo # glitch text :))
-lines = open('/Users/luka/OneDrive - ОАНО Школа ЛЕТОВО/Programming/Python/MyProjects/BullsAndCows/boy_users.txt').read().splitlines() #random nicknames
+import os
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+my_file = os.path.join(THIS_FOLDER, 'BoyUsers.txt')
+lines = open(my_file).read().splitlines() #random nicknames
 
 def DurakCheckFunction(guess): #check for invalid numbers
     DurakCheck=0
